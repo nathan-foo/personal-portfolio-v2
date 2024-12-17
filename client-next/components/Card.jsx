@@ -1,9 +1,21 @@
-import React from 'react'
-import { TiLocationArrow } from 'react-icons/ti'
+"use client";
 
-const Card = ({ src, title, description }) => {
+import React from 'react';
+import { TiLocationArrow } from 'react-icons/ti';
+import { useRouter } from 'next/navigation';
+import Widget from './Widget';
+
+const Card = ({ src, title, description, href, isComingSoon }) => {
+    const router = useRouter();
+
+    const handleClick = () => {
+        if (href) {
+            router.push(href);
+        }
+    }
+
   return (
-    <div className='relative size-full'>
+    <div className='relative size-full' onClick={handleClick}>
         <video
             src={src}
             loop
@@ -20,10 +32,13 @@ const Card = ({ src, title, description }) => {
                     </p>
                 )}
             </div>
-            {/* <TiLocationArrow className='m-5 scale-[5] self-end fill-blue-300' /> */}
+            {isComingSoon && (
+                <Widget title='Coming Soon' />
+            )}
+            {/* <TiLocationArrow className='m-5 scale-[5] self-end fill-[#edff66]' /> */}
         </div>
     </div>
   )
 }
 
-export default Card
+export default Card;

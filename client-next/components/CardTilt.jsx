@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react';
 
 const CardTilt = ({ children, className = '' }) => {
     const [transformStyle, setTransformStyle] = useState('');
@@ -39,4 +39,4 @@ const CardTilt = ({ children, className = '' }) => {
     )
 }
 
-export default CardTilt
+export default CardTilt;

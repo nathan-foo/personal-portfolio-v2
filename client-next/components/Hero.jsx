@@ -1,9 +1,91 @@
-import React from 'react'
+"use client";
+
+import React, { useRef } from 'react';
+import Title from './Title';
+import gsap from 'gsap';
+import PolygonMask from './PolygonMask';
+import Button from './Button';
 
 const Hero = () => {
+  const frameRef = useRef('null');
+
+  const handleMouseLeave = () => {
+    const element = frameRef.current;
+
+    gsap.to(element, {
+      duration: 0.3,
+      rotateX: 0,
+      rotateY: 0,
+      ease: 'power1.inOut',
+    });
+  }
+  
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    const element = frameRef.current;
+
+    if (!element) return;
+
+    const rect = element.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -5;
+    const rotateY = ((x - centerY) / centerX) * 5;
+
+    gsap.to(element, {
+      duration: 0.3,
+      rotateX, rotateY,
+      transformPerspective: 500,
+      ease: 'power1.out',
+    });
+  }
+
   return (
-    <div>Hero</div>
+    <section className='w-screen mt-8'>
+      <div className='flex size-full flex-col items-center py-10 pb-24'>
+        <p className='text-sm uppercase md:text-[10px]'>Hello, my name is</p>
+        <div className='relative size-full'>
+          <Title
+            title='Nathan Foo'
+            containerClass='mt-2 relative z-10 mix-blend-difference'
+          />
+          <div className='hero-img-container'>
+            <div className='hero-img-mask'>
+              <div className='mt-4 md:mt-0'>
+                <img
+                  ref={frameRef}
+                  onMouseLeave={handleMouseLeave}
+                  onMouseUp={handleMouseLeave}
+                  onMouseEnter={handleMouseLeave}
+                  onMouseMove={handleMouseMove}
+                  src='/images/headshotcrop.png'
+                  alt='image'
+                  className='object-contain'
+                />
+              </div>
+            </div>
+            <PolygonMask />
+          </div>
+        </div>
+        <div className='-mt-80 flex w-full justify-center md:mt-[-22rem] md:me-44 md:justify-end'>
+          <div className='flex h-full z-10 mix-blend-difference w-fit flex-col items-center md:items-start'>
+            <p className='mt-80 md:mt-[-1rem] max-w-sm text-center md:text-start'>
+              Some text goes here. Here is some more text. And even more. Awesome. Filling out even more space with text. So cool.
+            </p>
+            <Button
+              id='hero-button'
+              title={`Let's Connect`}
+              containerClass='mt-5'
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 
-export default Hero
+export default Hero;

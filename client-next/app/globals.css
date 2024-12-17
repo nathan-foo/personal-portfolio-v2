@@ -9,16 +9,31 @@
     } */
 }
 
+body, html {
+    background-color: black;
+    color: #eff6ff;
+}
+
 @layer utilities {
     .card-border {
         @apply border border-white/20;
     }
 
     .card-title {
-        @apply uppercase text-4xl md:text-6xl font-black text-blue-50;
+        @apply uppercase text-4xl md:text-6xl font-black;
     }
 
     .card-tilt {
         @apply card-border relative overflow-hidden rounded-md transition-transform duration-300 ease-out;
+    }
+
+    .hero-img-container {
+        @apply relative h-[70vh] md:h-dvh w-[60%] mx-auto block;
+        filter: url("#flt_tag");
+    }
+
+    .hero-img-mask {
+        @apply absolute left-4 top-0 size-full overflow-hidden md:left-[15%] md:top-[-10%] md:size-4/5;
+        clip-path: polygon(4% 0, 83% 21%, 100% 73%, 0% 100%);
     }
 }
