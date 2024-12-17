@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    /* @font-face {
+        font-family: '';
+        src: url('../public/fonts/') format('');
+    } */
+}
+
+@layer utilities {
+    .card-border {
+        @apply border border-white/20;
+    }
+
+    .card-title {
+        @apply uppercase text-4xl md:text-6xl font-black text-blue-50;
+    }
+
+    .card-tilt {
+        @apply card-border relative overflow-hidden rounded-md transition-transform duration-300 ease-out;
+    }
+}
