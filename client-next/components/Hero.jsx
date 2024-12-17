@@ -45,7 +45,7 @@ const Hero = () => {
   }
 
   return (
-    <section className='w-screen mt-8'>
+    <section className='w-screen mt-2'>
       <div className='flex size-full flex-col items-center py-10 pb-24'>
         <p className='text-sm uppercase md:text-[10px]'>Hello, my name is</p>
         <div className='relative size-full'>
@@ -73,7 +73,7 @@ const Hero = () => {
         </div>
         <div className='-mt-80 flex w-full justify-center md:mt-[-22rem] md:me-44 md:justify-end'>
           <div className='flex h-full z-10 mix-blend-difference w-fit flex-col items-center md:items-start'>
-            <p className='mt-80 md:mt-[-1rem] max-w-sm text-center md:text-start'>
+            <p className='mt-80 md:mt-[2rem] max-w-sm text-center md:text-start'>
               Some text goes here. Here is some more text. And even more. Awesome. Filling out even more space with text. So cool.
             </p>
             <Button
