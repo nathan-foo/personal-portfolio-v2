@@ -5,6 +5,8 @@ import Title from './Title';
 import gsap from 'gsap';
 import PolygonMask from './PolygonMask';
 import Button from './Button';
+import { TiLocationArrow } from 'react-icons/ti';
+import Link from 'next/link';
 
 const Hero = () => {
   const frameRef = useRef('null');
@@ -76,11 +78,14 @@ const Hero = () => {
             <p className='mt-80 md:mt-[1rem] max-w-sm text-center md:text-start'>
               Some text goes here. Here is some more text. And even more. Awesome. Filling out even more space with text. So cool.
             </p>
-            <Button
-              id='hero-button'
-              title={`Let's Connect`}
-              containerClass='mt-5'
-            />
+            <Link href='/contact'>
+              <Button
+                id='hero-button'
+                title={`Let's Connect`}
+                rightIcon={<TiLocationArrow />}
+                containerClass='mt-5 flex items-center justify-center gap-1'
+              />
+            </Link>
           </div>
         </div>
       </div>

@@ -36,4 +36,8 @@ body, html {
         @apply absolute left-4 top-0 size-full overflow-hidden md:left-[15%] md:top-[-10%] md:size-4/5;
         clip-path: polygon(4% 0, 83% 21%, 100% 73%, 0% 100%);
     }
+
+    .nav-hover {
+        @apply relative ms-10 text-xs uppercase after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+    }
 }

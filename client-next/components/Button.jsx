@@ -1,4 +1,4 @@
-const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
+const Button = ({ id, title, color, rightIcon, leftIcon, containerClass }) => {
   return (
     <button
       id={id}
