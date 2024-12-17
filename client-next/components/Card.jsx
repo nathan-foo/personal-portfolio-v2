@@ -16,11 +16,11 @@ const Card = ({ src, title, description, href, isComingSoon }) => {
 
   return (
     <div className='relative size-full' onClick={handleClick}>
-        <video
+        <img
             src={src}
-            loop
-            muted
-            autoPlay
+            // loop
+            // muted
+            // autoPlay
             className='absolute left-0 top-0 size-full object-cover object-center'
         />
         <div className='relative z-10 flex flex-col size-full justify-between p-5'>

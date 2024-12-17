@@ -5,7 +5,7 @@ const Widget = ({ title, href }) => {
 
   return (
     <button
-        className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-[#edff66] px-7 py-3 text-black pointer-events-none flex items-center justify-center gap-1`}
+        className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-[black] px-7 py-3 text-blue-50 fill-blue-50 pointer-events-none flex items-center justify-center gap-1 outline outline-1 outline-blue-50/50`}
     >
         <span className='relative overflow-hidden text-xs uppercase'>
             <div>
