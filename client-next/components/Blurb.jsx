@@ -5,13 +5,13 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import React from 'react';
 
-const About = () => {
+const Blurb = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.about-text',
+        trigger: '.blurb-text',
         start: 'top bottom',
         end: 'bottom bottom',
         scrub: false,
@@ -19,7 +19,7 @@ const About = () => {
       }
     });
     
-    tl.to('.about-text', {
+    tl.to('.blurb-text', {
       y: -80
     });
   });
@@ -27,7 +27,7 @@ const About = () => {
   return (
     <section className='relative pt-48 pb-12 z-20'>
       <div className='container mx-auto px-3 md:px-10'>
-        <div className='about-text flex flex-col items-center justify-center'>
+        <div className='blurb-text flex flex-col items-center justify-center'>
           <p className='font-black text-4xl md:text-6xl'>
             Dream Bigger.
           </p>
@@ -40,4 +40,4 @@ const About = () => {
   )
 }
 
-export default About;
+export default Blurb;

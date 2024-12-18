@@ -1,4 +1,4 @@
-import About from "@/components/About";
+import Blurb from "@/components/Blurb";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Squiggle from "@/components/Squiggle";
@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Squiggle />
       <Hero />
-      <About />
+      <Blurb />
       <Features />
     </div>
   );
