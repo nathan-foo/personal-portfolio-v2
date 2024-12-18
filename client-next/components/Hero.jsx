@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
         </div>
         <div className='-mt-80 flex w-full justify-center md:mt-[-22rem] md:me-44 md:justify-end'>
-          <div className='flex h-full z-10 mix-blend-difference w-fit flex-col items-center md:items-start'>
+          <div className='flex h-full z-10  w-fit flex-col items-center md:items-start'>
             <p className='mt-80 md:mt-[2rem] max-w-sm text-center md:text-start'>
               I'm a full-stack software engineer, currently pursuing a computer science degree at UT Austin.
             </p>

@@ -4,14 +4,14 @@ import CardTilt from './CardTilt';
 
 const Features = () => {
   return (
-    <section className='pb-48'>
+    <section className='relative pb-48 z-20'>
         <div className='container mx-auto px-3 md:px-10'>
             <div className='px-5 py-32'>
                 <p className='text-lg'>
                     I like to build things.
                 </p>
                 <p className='max-w-md text-lg opacity-50'>
-                    But not just anything. Through my apps, I am driven to make a positive difference in the world.
+                    Through my work, I do my best to make a positive impact in the world.
                 </p>
             </div>
             <CardTilt className='mb-7 h-96 w-full overflow-hidden md:h-[65vh]'>
