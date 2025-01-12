@@ -4,9 +4,6 @@ import React, { useRef } from 'react';
 import Title from './Title';
 import gsap from 'gsap';
 import PolygonMask from './PolygonMask';
-import Button from './Button';
-import { TiLocationArrow } from 'react-icons/ti';
-import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 
 const Hero = () => {
@@ -59,7 +56,7 @@ const Hero = () => {
   }
 
   return (
-    <section className='hero-section w-screen mt-6'>
+    <section className='hero-section relative w-screen mt-6'>
       <div className='flex size-full flex-col items-center py-10 pb-24'>
         <p className='text-sm uppercase md:text-[10px]'>Hello, my name is</p>
         <div className='relative size-full'>
@@ -85,21 +82,7 @@ const Hero = () => {
             <PolygonMask />
           </div>
         </div>
-        <div className='-mt-80 flex w-full justify-center md:mt-[-22rem] md:me-44 md:justify-end'>
-          <div className='flex h-full z-10  w-fit flex-col items-center md:items-start'>
-            <p className='mt-80 md:mt-[2rem] max-w-sm text-center md:text-start'>
-              I'm a full-stack software engineer, currently pursuing a computer science degree at UT Austin.
-            </p>
-            <Link href='/contact'>
-              <Button
-                id='hero-button'
-                title={`Let's Connect`}
-                rightIcon={<TiLocationArrow />}
-                containerClass='mt-5 flex items-center justify-center gap-1'
-              />
-            </Link>
-          </div>
-        </div>
+        
       </div>
     </section>
   )

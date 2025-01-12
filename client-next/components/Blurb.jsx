@@ -25,7 +25,7 @@ const Blurb = () => {
   });
 
   return (
-    <section className='relative pt-48 pb-12 z-20'>
+    <section className='relative pt-32 pb-12 z-20'>
       <div className='container mx-auto px-3 md:px-10'>
         <div className='blurb-text flex flex-col items-center justify-center'>
           <p className='font-black text-4xl md:text-6xl'>

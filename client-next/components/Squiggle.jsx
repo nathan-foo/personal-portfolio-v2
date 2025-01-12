@@ -31,7 +31,7 @@ const Squiggle = () => {
   return (
     <div>
         <svg
-            className={`squiggle absolute hidden md:block top-0 left-0 w-[100vw] h-[200vw] z-10 pointer-events-none ${visible ? 'opacity-100' : 'opacity-0'}`}
+            className={`squiggle absolute hidden lg:block top-0 left-0 w-[100vw] h-[200vw] z-10 pointer-events-none ${visible ? 'opacity-100' : 'opacity-0'}`}
             width='1000'
             height='2000'
             viewBox='0 0 1000 2000'

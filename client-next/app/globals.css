@@ -28,7 +28,7 @@ body, html {
     }
 
     .hero-img-container {
-        @apply relative h-[70vh] md:h-dvh w-[60%] mx-auto block;
+        @apply relative h-[370px] w-[370px] md:h-[700px] md:w-[700px] mx-auto block;
         filter: url("#flt_tag");
     }
 
